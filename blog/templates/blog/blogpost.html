@@ -1,0 +1,50 @@
+{% extends 'blog/basic.html' %}
+
+{% block body %}
+<div class="container my-5">
+    <div class="row">
+        <!-- Main Content -->
+        <div class="col-lg-8">
+            <h3 class="pb-4 mb-4 border-bottom text-primary fw-bold">
+                {{ post.title }}
+            </h3>
+
+            <article class="blog-post bg-light p-4 rounded shadow-sm">
+                <h2 class="display-6 text-dark mb-3">{{ post.head0 }}</h2>
+                <p class="text-muted small">Published on February 5, 2025 by <a href="#" class="text-decoration-none text-primary">Martin</a></p>
+                <div class="fb-like" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+                <p class="mb-4">{{ post.chead0 }}</p>
+
+                <h2 class="h4 text-secondary mt-4">{{ post.head1 }}</h2>
+                <p class="mb-4">{{ post.chead1 }}</p>
+
+                <h3 class="h5 text-dark mt-4">{{ post.head2 }}</h3>
+                <p>{{ post.chead2 }}</p>
+            </article>
+            <div class="fb-comments" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-width="" data-numposts="5"></div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <!-- About Section -->
+                <div class="p-4 mb-4 bg-white rounded shadow-sm border">
+                    <h4 class="fst-italic text-primary">About</h4>
+                    <p class="text-muted">myawesomekart is an e-commerce platform designed to provide users with a seamless online shopping experience. It offers a wide range of products across various categories, including electronics, fashion, home essentials, groceries, and more. The website aims to combine convenience, affordability, and quality, making it a one-stop shop for customers.</p>
+                    <div class="fb-share-button" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Fblog%2Fblogpost%2F1&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="p-4 bg-light rounded shadow-sm border">
+                    <h4 class="fst-italic text-primary">Contact Us On</h4>
+                    <ul class="list-unstyled text-dark">
+                        <li><a href="#" class="text-decoration-none text-primary">GitHub</a></li>
+                        <li><a href="#" class="text-decoration-none text-primary">Meta</a></li>
+                        <li><a href="#" class="text-decoration-none text-primary">X</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
